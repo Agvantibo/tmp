@@ -1,9 +1,15 @@
 input()
-array = [int(i) for i in input().split()]
-biggest = array[0]
-biggest_index = 0
-for i in range(1, len(array) - 1):
-    if array[i] > biggest:
-        biggest_index = i
-        biggest = array[i]
-print(biggest_index + 1)
+ar1 = [int(i) for i in input().split()]
+
+if len(ar1) > 0:
+    b_ind = 0
+    valBuf = ar1[b_ind]
+
+    for i in range(1, len(ar1) - 1):
+            if valBuf < ar1[i]:
+                b_ind = i
+                valBuf = ar1[i]
+
+    print(valBuf+1)
+else:
+    print ("error")
