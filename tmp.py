@@ -10,6 +10,6 @@ if len(ar1) > 0:
                 b_ind = i
                 valBuf = ar1[i]
 
-    print(valBuf+1)
+    print(b_ind+1)
 else:
     print ("error")
