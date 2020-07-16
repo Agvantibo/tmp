@@ -4,4 +4,4 @@ biggest = array[0]
 for i in array:
     if i > biggest:
         biggest = i
-print(biggest)
+print(array.index(biggest) + 1)
