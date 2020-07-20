@@ -1,12 +1,13 @@
-input()
-array = [int(i) for i in input().split()]
-smallest = array[0]
+query = int(input())
+size = int(input())
+array = []
+for i in range(size):
+    array.append([int(i) for i in input().split()])
 for i in array:
-    if i < smallest:
-        smallest = i
-array.pop(array.index(smallest))
-second_smallest = array[0]
-for i in array:
-    if i < second_smallest:
-        second_smallest = i
-print(smallest, second_smallest)
+    flag = False
+    for j in i:
+        if not flag and j == query:
+            flag = True
+            print('YES')
+    if not flag:
+        print('NO')
