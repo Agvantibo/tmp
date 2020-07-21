@@ -1,13 +1,20 @@
-query = int(input())
-size = int(input())
-array = []
-for i in range(size):
-    array.append([int(i) for i in input().split()])
-for i in range(size):
-    flag = False
-    for j in range(size):
-        if not flag and array[j][i] == query:
-            flag = True
-            print('YES')
-    if not flag:
-        print('NO')
+from random import choice
+input()
+array = [int(i) for i in input().split()]
+def quicksort(nums):
+   if len(nums) <= 1:
+       return nums
+   else:
+       q = choice(nums)
+       s_nums = []
+       m_nums = []
+       e_nums = []
+       for n in nums:
+           if n < q:
+               s_nums.append(n)
+           elif n > q:
+               m_nums.append(n)
+           else:
+               e_nums.append(n)
+       return quicksort(s_nums) + e_nums + quicksort(m_nums)
+print(' '.join([str(i) for i in quicksort(array)]))
