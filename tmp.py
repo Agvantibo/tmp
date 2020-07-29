@@ -19,10 +19,11 @@ for i in queries:
     rd = binarySearch(array,i)
     print(rd + 1, end=' ')
     testfield.pop(rd)
+    old = rd
     while True:
-        rd = binarySearch(array,i)
+        rd = binarySearch(testfield,i)
         if rd == -1:
             break
         testfield.pop(rd)
         old = rd
-print(old)
+    print(old + 1)
